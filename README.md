@@ -1,27 +1,69 @@
-# **cpp_project**
-Détection de droites à l'aide de Ransac et de la transformée de Hough
+**Détection de droites à l'aide de Ransac et de la transformée de Hough**
+
+
+**Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
+
+**4 fichiers** : 
+
+- image
+- Hough naïf
+- Hough polaire
+- RANSAC
+
+Liste des onctions par fichier et leur utilité : 
+
+- image :
+    **Pour le traîtement de l'image, l'import et la sauvegarde**
+    - convertirNiveauGris
+    - seuillage
+    - loadPPM
+    - savePPM
+    - saveBinaryPPM
+ 
+    **Pour l'affichage**
+    - appel à la bibliothèque matplotlib de python
+ 
+    **Pour le test du filtre de Sobel**
+    - sobel
+ 
+- Hough naïf :
+    **Pour la détection d'une seule droite avec une image test**
+    - creerImage
+    - hougNaif
+
+    **Pour la détection et le tracer de plusieurs droites**
+    - genererImageTest
+    - houghNaif
+    - nonMaximumSuppression
+    - detecterDroites
+    - fonction de trie
+    - topKdroites
+    - tracerDroite
+    - tracerDroites
+    - savePPM
+ 
+  - Hough polaire :
+      - loadPPM
+      - toGray
+      - sobel
+      - sobelAcc
+      - NMS
+      - moyenne
+      - saveAccAsPPM
+      - houghPolaire
+      - fonction de tri
+      **Pour l'affichage**
+    - appel à la bibliothèque matplotlib de python
+      
+**Liste des structures utilisées**
+  - Image générique
+  - PixelRGB
+  - PixelGris
+  - PixelBin
+  - Droite
 
 **Guide utilisation**
-**Résumé structures utilisées**
 **Tests**
 
-**Etapes du projet**
-- Comprendre les différentes méthodes et poser un cadre mathématiques (paragraphe1)
-- Documentation sur la bibliothèque matplotlib en c++ et lecture d'image ppm
-- Ecrire les pseudos-codes des méthodes de Hough naïf et polaire (paragraphe2)
-- Explorer les axes d'optimisation du code, comprendre les subtilités, limites et avantages de chaque méthode (paragraphe3)
-- Ecrire les codes en c++ de manière simple
-- Explorer avec des tests et essayer de trouver des améliorations
 
-**1. Méthodes de Hough**
-**1.1. Hough naïf**
-**1.2. Hough polaire**
-**1.3. Cadre mathématique**
-
-**2. Pseudo-codes**
-**2.1. Pseudo-code Hough (naïf et polaire)**
-**2.2. Pseudo-code RANSAC**
-
-**3. Avantages de inconvéniants de chaque méthode**
-**3.1 Limites de Hough naïf**
 
