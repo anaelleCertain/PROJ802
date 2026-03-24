@@ -57,6 +57,7 @@ Liste des onctions par fichier et leur utilité :
       
    **Pour l'affichage**
     - appel à la bibliothèque matplotlib de python
+    - pour l'affichage de l'image avec les droites détectées : modifier les valeurs de $\rho$ et $\theta$ dans le code avec les nouvelles coordonnées trouvées
 
       
 **Liste des structures utilisées**
