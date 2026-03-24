@@ -1,16 +1,16 @@
 # **Détection de droites à l'aide de Ransac et de la transformée de Hough**
 
 
-**Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
+### **Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
 
 **4 fichiers** : 
 
-- image
-- Hough naïf
-- Hough polaire
+- Image : Contient l'ensemble des structures de pixels, les fonctions pour le traîtement des images et les fonctions pour la lecture et sauvegarde des images
+- Hough naïf : Premier code avec une implémentation du code de Hough naïf et une fonction pour détecter une droite sur une image test. Puis un second code avec la détection de plusieurs droites, avec tri des droites détectées pour ne garder que les $K$ meilleures droites. (sans visualisation)
+- Hough polaire : Traîtement de l'image avec un filtre de Sobel pour la détection des contours, implémentation de la méthode de Hough en polaire puis traîtement de l'accumulateur pour détecter les pics : application du filtre de Sobel et la suppression des non-maxima. Fonctions pour la visualisation du résultat : dessiner les droites, créer l'image au bon format. Puis utilisation de matplotlib pour visualiser l'accumulateur et l'image avec les droites détectée dessus.
 - RANSAC
 
-Liste des onctions par fichier et leur utilité : 
+Liste des fonctions par fichier et leur utilité : 
 
 - image :
 
@@ -67,12 +67,12 @@ Liste des onctions par fichier et leur utilité :
   - PixelBin
   - Droite
 
-**Guide utilisation**
+### **Guide utilisation**
 
 Chaque fichier peut-être exécuté indépendemment des autres car toutes les structures nécessaires à la compilation sont importées au début du code.
 
 
-**Tests**
+### **Tests**
 
 
 
