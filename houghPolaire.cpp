@@ -61,7 +61,7 @@ ImageGenerique<PixelRGB> loadPPM(const std::string& filename){
 
   ImageGenerique<PixelRGB> img(w_read,h_read);
 
-  for(int i=0;i<w_read*h_read;i++){
+  for(int i = 0; i< w_read * h_read; i++){
     file >> img.image[i].r >> img.image[i].g >> img.image[i].b;
   }
 
@@ -297,11 +297,14 @@ void houghPolaire(const ImageGenerique<PixelBin<int>>& img,
   for(int y = 0; y < height; y++){
     for(int x = 0; x < width; x++){
 
-      if(img.at(x,y).value > 0){
+      if(img.at(y,x).value > 0){
 
         for(int t = 0; t < nb_theta; t++){
 
+          // Transformée inverse
           float theta = theta_min + t * theta_step;
+
+          // Equation de la transformée de Hough
           float rho = x * cos(theta) + y * sin(theta);
 
           int r = (int)((rho - rho_min)/rho_step);
