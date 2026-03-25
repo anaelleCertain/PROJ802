@@ -7,17 +7,19 @@
 
 - image.cpp : Contient l'ensemble des structures de pixels, les fonctions pour le traîtement des images et les fonctions pour la lecture et sauvegarde des images
 
-- affichageImage.ipynb : Code python pour l'affichage de l'image d'origine et de l'image binarisée avec la bibliothèque matplotlib.
+- affichageImage.py : Code python pour l'affichage de l'image d'origine et de l'image binarisée avec la bibliothèque matplotlib.
 
 - sobel.cpp : Code du filtre de Sobel qui est utilisé plus tard sur l'image d'entrée et l'accumulateur. Le code est testé sur une image test.
 
-- affichageSobel.ipynb : Code python pour l'affichage de l'image filtrée par Sobel avec la bibliothèque matplotlib.
+- affichageSobel.py : Code python pour l'affichage de l'image filtrée par Sobel avec la bibliothèque matplotlib.
 
 - houghNaif.cpp : Implémentation de l'algorithme de la méthtode de Hough sous la forme affine $y = mx + b$. Application sur une image test. Affichage pour la détection d'une droite étape par étape puis détection de toutes les droites. Tracé des droites et sauvegarde de l'image avec les droites.
 
 - affichageHoughNaif.py : Code python pour l'affichage de l'image créée avec tracé en rouge les droites détectées avec la bibliothèque matplotlib.
 
-- Hough polaire : Traîtement de l'image avec un filtre de Sobel pour la détection des contours, implémentation de la méthode de Hough en polaire puis traîtement de l'accumulateur pour détecter les pics : application du filtre de Sobel et la suppression des non-maxima. Fonctions pour la visualisation du résultat : dessiner les droites, créer l'image au bon format. Puis utilisation de matplotlib pour visualiser l'accumulateur et l'image avec les droites détectée dessus.
+- houghPolaire.cpp : Traîtement de l'image avec un filtre de Sobel pour la détection des contours, implémentation de la méthode de Hough en polaire puis traîtement de l'accumulateur pour détecter les pics : application du filtre de Sobel et la suppression des non-maxima. Fonctions pour la visualisation du résultat.
+
+- affichageHoughPolaire.py : Affichage de l'accumulateur et de l'image binaire avec les droites détectées tracées dessus.
 
 - RANSAC
 
@@ -76,7 +78,7 @@ Liste des fonctions par fichier et leur utilité :
   - PixelRGB
   - PixelGris
   - PixelBin
-  - Droite
+  - Droite 
 
 ### **Guide utilisation**
 
@@ -85,9 +87,11 @@ Chaque fichier peut-être exécuté indépendemment des autres car toutes les st
 Comme les codes ont été fait sur Google Collab, pour compiler faire :
 
 %%bash
+
 g++ nomFichier.cpp -o nomFichier_app
 
 %%bash
+
 ./nomFichier_app
 
 
