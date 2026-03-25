@@ -13,7 +13,9 @@
 
 - affichageSobel.ipynb : Code python pour l'affichage de l'image filtrée par Sobel avec la bibliothèque matplotlib.
 
-- Hough naïf : Premier code avec une implémentation du code de Hough naïf et une fonction pour détecter une droite sur une image test. Puis un second code avec la détection de plusieurs droites, avec tri des droites détectées pour ne garder que les $K$ meilleures droites. (sans visualisation)
+- houghNaif.cpp : Implémentation de l'algorithme de la méthtode de Hough sous la forme affine $y = mx + b$. Application sur une image test. Affichage pour la détection d'une droite étape par étape puis détection de toutes les droites. Tracé des droites et sauvegarde de l'image avec les droites.
+
+- affichageHoughNaif.py : Code python pour l'affichage de l'image créée avec tracé en rouge les droites détectées avec la bibliothèque matplotlib.
 
 - Hough polaire : Traîtement de l'image avec un filtre de Sobel pour la détection des contours, implémentation de la méthode de Hough en polaire puis traîtement de l'accumulateur pour détecter les pics : application du filtre de Sobel et la suppression des non-maxima. Fonctions pour la visualisation du résultat : dessiner les droites, créer l'image au bon format. Puis utilisation de matplotlib pour visualiser l'accumulateur et l'image avec les droites détectée dessus.
 
