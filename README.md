@@ -1,5 +1,7 @@
 # **Détection de droites à l'aide de Ransac et de la transformée de Hough**
 
+Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traîtement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire.
+
 
 ### **Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
 
@@ -21,57 +23,6 @@
 
 - affichageHoughPolaire.py : Affichage de l'accumulateur et de l'image binaire avec les droites détectées tracées dessus.
 
-- RANSAC
-
-Liste des fonctions par fichier et leur utilité : 
-
-- image :
-
-  **Pour le traîtement de l'image, l'import et la sauvegarde**
-    - convertirNiveauGris
-    - seuillage
-    - loadPPM
-    - savePPM
-    - saveBinaryPPM
- 
-   **Pour l'affichage**
-    - appel à la bibliothèque matplotlib de python
- 
-   **Pour le test du filtre de Sobel**
-    - sobel
- 
-- Hough naïf :
-
-  **Pour la détection d'une seule droite avec une image test**
-    - creerImage
-    - hougNaif
-
-   **Pour la détection et le tracer de plusieurs droites**
-    - genererImageTest
-    - houghNaif
-    - nonMaximumSuppression
-    - detecterDroites
-    - fonction de trie
-    - topKdroites
-    - tracerDroite
-    - tracerDroites
-    - savePPM
- 
-  - Hough polaire :
-      - loadPPM
-      - toGray
-      - sobel
-      - sobelAcc
-      - NMS
-      - moyenne
-      - saveAccAsPPM
-      - houghPolaire
-      - fonction de tri
-      
-   **Pour l'affichage**
-    - appel à la bibliothèque matplotlib de python
-    - pour l'affichage de l'image avec les droites détectées : modifier les valeurs de $\rho$ et $\theta$ dans le code avec les nouvelles coordonnées trouvées
-
       
 **Liste des structures utilisées**
   - Image générique
@@ -84,6 +35,8 @@ Liste des fonctions par fichier et leur utilité :
 
 Chaque fichier peut-être exécuté indépendemment des autres car toutes les structures nécessaires à la compilation sont importées au début du code.
 
+Le code sobel.cpp peut aussi être appliqué à Hough naïf.
+
 Comme les codes ont été fait sur Google Collab, pour compiler faire :
 
 %%bash
@@ -95,7 +48,6 @@ g++ nomFichier.cpp -o nomFichier_app
 ./nomFichier_app
 
 
-### **Tests**
 
 
 
