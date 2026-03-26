@@ -1,6 +1,6 @@
 # **Détection de droites à l'aide de Ransac et de la transformée de Hough**
 
-Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traîtement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire.
+Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traîtement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire où $\rho = x*cos(\theta) + y*sin(\theta)$.
 
 
 ### **Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
@@ -23,19 +23,25 @@ Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Ho
 
 - affichageHoughPolaire.py : Affichage de l'accumulateur et de l'image binaire avec les droites détectées tracées dessus.
 
+- RANSAC.cpp : Code basique (pas optimisé au niveau des seuils et des sélections des points p1 et p2). Avec un main() qui peut être utilisé dans le main() de houghPolaire.
+
       
 **Liste des structures utilisées**
   - Image générique
   - PixelRGB
   - PixelGris
   - PixelBin
-  - Droite 
+  - Droite
+  - Point 
+
 
 ### **Guide utilisation**
 
 Chaque fichier peut-être exécuté indépendemment des autres car toutes les structures nécessaires à la compilation sont importées au début du code.
 
 Le code sobel.cpp peut aussi être appliqué à Hough naïf.
+
+Dans le main de RANSAC.cpp on trouve le code à coller dans le main() de houghPolaire.
 
 Comme les codes ont été fait sur Google Collab, pour compiler faire :
 
