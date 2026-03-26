@@ -3,7 +3,7 @@
 Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traîtement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire où $\rho = xcos(\theta) + ysin(\theta)$.
 
 
-### **Explication de la structure des fichiers et des fonctions qu'ils cotniennent**
+### **Contenu**
 
 **Fichiers** : 
 
@@ -24,6 +24,8 @@ Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Ho
 - affichageHoughPolaire.py : Affichage de l'accumulateur et de l'image binaire avec les droites détectées tracées dessus.
 
 - RANSAC.cpp : Code basique (pas optimisé au niveau des seuils et des sélections des points p1 et p2). Avec un main() qui peut être utilisé dans le main() de houghPolaire.
+
+- Deux images pour la compilation : imageM1_bin.ppm et imageM1.ppm et un résultat (filtre de Sobel) sobel.ppm.
 
       
 **Liste des structures utilisées**
@@ -52,6 +54,8 @@ g++ nomFichier.cpp -o nomFichier_app
 %%bash
 
 ./nomFichier_app
+
+Pou
 
 
 
