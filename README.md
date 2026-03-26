@@ -55,7 +55,23 @@ g++ nomFichier.cpp -o nomFichier_app
 
 ./nomFichier_app
 
-Pou
+Commandes pour clôner le projet dans colab : 
+
+!git clone https://github.com/anaelleCertain/PROJ802.git
+
+%cd PROJ802
+
+!g++ main.cpp -o programme
+
+!./programme
+
+
+
+
+
+
+
+
 
 
 
