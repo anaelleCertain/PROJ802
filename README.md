@@ -1,6 +1,6 @@
 # **Détection de droites à l'aide de Ransac et de la transformée de Hough**
 
-Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traîtement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire où $\rho = xcos(\theta) + ysin(\theta)$.
+Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traitement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire où $\rho = xcos(\theta) + ysin(\theta)$.
 
 
 ### **Contenu**
@@ -39,7 +39,7 @@ Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Ho
 
 ### **Guide utilisation**
 
-Chaque fichier peut-être exécuté indépendemment des autres car toutes les structures nécessaires à la compilation sont importées au début du code.
+Chaque fichier peut être exécuté indépendemment des autres car toutes les structures nécessaires à la compilation sont importées au début du code.
 
 Le code sobel.cpp peut aussi être appliqué à Hough naïf.
 
@@ -48,12 +48,11 @@ Dans le main de RANSAC.cpp on trouve le code à coller dans le main() de houghPo
 Comme les codes ont été fait sur Google Collab, pour compiler faire :
 
 %%bash
-
 g++ nomFichier.cpp -o nomFichier_app
 
 %%bash
-
 ./nomFichier_app
+
 
 Commandes pour clôner le projet dans colab : 
 
