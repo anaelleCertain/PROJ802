@@ -3,6 +3,7 @@
 Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Hough afin de détecter des droites dans une image. Les différentes étapes sont les suivantes : pré-traitement de l'image pour la binariser, la lire au format ppm et sauvegarder l'image binaire. Puis implémentation de la première méthode dans l'esapce de Hough où les objets sont des droites données par leur équation $y = mx + b$. Ensuite on cherche une méthode plus robuste et moins limitée de la méthode de Hough où on passe les coordonnées en polaire où $\rho = xcos(\theta) + ysin(\theta)$.
 
 
+
 ### **Contenu**
 
 **Fichiers** : 
