@@ -45,16 +45,18 @@ Le code sobel.cpp peut aussi être appliqué à Hough naïf.
 
 Dans le main de RANSAC.cpp on trouve le code à coller dans le main() de houghPolaire.
 
-Comme les codes ont été fait sur Google Collab, pour compiler faire :
+- Comme les codes ont été fait sur Google Collab, pour compiler faire :
 
 %%bash
+
 g++ nomFichier.cpp -o nomFichier_app
 
 %%bash
+
 ./nomFichier_app
 
 
-Commandes pour clôner le projet dans colab : 
+- Commandes pour clôner le projet dans colab : 
 
 !git clone https://github.com/anaelleCertain/PROJ802.git
 
