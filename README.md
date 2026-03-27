@@ -4,9 +4,8 @@ Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Ho
 
 
 
-### **Contenu**
+### **Contenu des fichiers**
 
-**Fichiers** : 
 
 - image.cpp : Contient l'ensemble des structures de pixels, les fonctions pour le traîtement des images et les fonctions pour la lecture et sauvegarde des images
 
@@ -30,6 +29,7 @@ Le but de ce projet est de mettre en oeuvre la méthode de la transformée de Ho
 
       
 **Liste des structures utilisées**
+  
   - Image générique
   - PixelRGB
   - PixelGris
